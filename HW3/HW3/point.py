@@ -1,9 +1,10 @@
 #4point.py
-class point():
+import math
+class Point():
     def __init__(self,x,y):
         self.x = x
         self.y = y
         
     def cal(self):
-        return sqrt(self.x**2 + self.y**2)
+        return math.sqrt(self.x**2 + self.y**2)
     

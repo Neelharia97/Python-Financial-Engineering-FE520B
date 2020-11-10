@@ -22,9 +22,10 @@ class Time():
     def DisplaySecond(self):
         self.second = self.hour*3600 + self.minute*60 + self.second
         print(self.second)
-t1 = Time(2,12,45)
-t2 = Time(2,44,45)
-t1.addTime(t2)
-t1.DisplayTime()
-t1.DisplaySecond()
-t2.DisplaySecond()
+if __name__ == "__main__":
+    t1 = Time(2,12,45)
+    t2 = Time(2,44,45)
+    t1.addTime(t2)
+    t1.DisplayTime()
+    t1.DisplaySecond()
+    t2.DisplaySecond()

@@ -1,4 +1,5 @@
 #1.1
+import numpy as np
 class Rectangular():
     
     def __init__(self,length,breadth):
@@ -14,16 +15,17 @@ print(myRec.area())
 print(myRec.perimeter())    
 
 #1.2
-import numpy as np
-length= np.random.randint(1,100,10)
-width = np.random.randint(1,100,10)
 
-a = np.array(length)
-b = np.array(width)
+if __name__ == "__main__":
+    length= np.random.randint(1,100,10)
+    width = np.random.randint(1,100,10)
 
-print("length: ",a)
-print("breadth: ",b)
+    a = np.array(length)
+    b = np.array(width)
 
-myRec = Rectangular(a,b)
-print("area: ",myRec.area())
-print("perimeter: ",myRec.perimeter())
+    print("length: ",a)
+    print("breadth: ",b)
+
+    myRec = Rectangular(a,b)
+    print("area: ",myRec.area())
+    print("perimeter: ",myRec.perimeter())

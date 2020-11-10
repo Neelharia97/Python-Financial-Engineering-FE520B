@@ -8,6 +8,9 @@ class LCG():
         
     def getSeed(self):
         return (self.seed)
+
+    def iter(self):
+        return self
     
     def SetSeed(self,inputSeed):
         self.seed = inputSeed
@@ -17,11 +20,14 @@ class LCG():
         self.seed = (self.seed*self.multiplier +self.increment)%self.modulus
         self.SetSeed(self.seed)
         return(self.seed)
-    
+
+    def __next__(self):
+        return self.generate()
+
     def nextNumbers(self,n):
-        for i in range(n):
+
             #print(self.generate())
-            print(self.generate()/2**32)
+        return [self.generate() for i in range(n)]
             #plt.scatter(self.generate()/2**32,i)
 
 class SCG(LCG):
@@ -42,10 +48,12 @@ class SCG(LCG):
             return (self.seed)
         
     
-        
-a = LCG(2,1103515245,12345,2**32)
-b = SCG(2,1103515245,12345,2**32)
-b.nextNumbers(10)
-print("\n")
-a.nextNumbers(10)
-    
+if __name__ == "__main__":
+    a = LCG(2,1103515245,12345,2**32)
+    b = SCG(2,1103515245,12345,2**32)
+   # print(a.__next__())
+   #print(b.__next__())
+    print(a.nextNumbers(10000000))
+   # print(b.nextNumbers(10))
+    #print("\n")
+
