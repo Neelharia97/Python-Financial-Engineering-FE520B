@@ -1,6 +1,8 @@
 # Python-Financial-Engineering-FE520B
+## Contents
+I have included all the assignments and class notes in this repository. Please, check out the final project as well.
 
-## Introduction
+## Project Introduction
 Built a tool for scraping data from SEC for any firm. To use the tool you need to know the CID of the company you want to scrape data from. 
 Currently, the tool is limited to fetching data from 10-K forms, either textual or numerical data. 
 
@@ -21,3 +23,4 @@ Currently, the tool is limited to fetching data from 10-K forms, either textual 
 > Following data cleaning, the data was stored in a MySQL database, with the help of Python.
 > I prepared SQL queries which were used as scripts to extract data from the database.
 > To make it usable by everyone, I prepared an API with Flask and Postman.
+![Pipeline](https://user-images.githubusercontent.com/54964516/111053356-23928180-8431-11eb-9749-348b8877e4b6.jpeg)
